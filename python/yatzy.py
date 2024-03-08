@@ -11,6 +11,16 @@ class Yatzy:
         return total
 
     @staticmethod
+    def crazy_chance(dice):
+        total = 0
+        for i in dice:
+            if i%2==0:
+                total+=i*3
+            else:
+                total+=i*2
+        return total
+
+    @staticmethod
     def yatzy(dice):
         counts = [0]*(len(dice)+1)
         for die in dice:
